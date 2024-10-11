@@ -8,5 +8,6 @@ export default registerAs('database', () => {
     username: process.env.DATABASE_USERNAME || 'root',
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_DATABASE,
+    synchronize: process.env.NODE_ENV === 'development',
   };
 });
